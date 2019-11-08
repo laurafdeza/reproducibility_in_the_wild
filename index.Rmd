@@ -290,7 +290,7 @@ xaringan::inf_mr()  # delay is one second
 <img src="./libs/images/model.png" height="480px" width="800px"/>
 
 ???
-We all feel frustrated: Model that shit
+"Model that shit"!!!
 
 ---
 <br/>
