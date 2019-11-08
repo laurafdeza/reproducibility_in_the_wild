@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Mapping prosody onto meaning – the case of information structure in American English</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Laura Fernández Arroyo" />
+    <link href="libs/remark-css-0.0.1/tamu-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/tamu.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Mapping prosody onto meaning – the case of information structure in American English
+## Roettger, Mahrt &amp; Cole, 2019
+### Laura Fernández Arroyo
+### 2019-03-27 (updated: 2019-04-16)
+
+---
+
+
+
+# Content
+
+1. Goal of the study
+
+--
+
+2. Methodology
+--
+
+3. Material and resource availability
+
+--
+ 
+4. Supplementary materials
+--
+
+5. Analysis:
+
+    - Software
+    - Running the code
+--
+
+6. Other materials
+--
+
+7. Conclusion
+
+---
+
+# 1. Goal of the study
+
+&lt;br/&gt;
+
+???
+
+The research so far is lacking empirical evidence for the relationship between the prosodic signal and information structure as perceived by a listener. This study aimed at finding out
+
+--
+
+### .center[**To what extent can prosodic form-function relationships &lt;br/&gt; be detected on the basis of prosodic cues?**]
+
+???
+
+
+
+The relationships they focus on are Givenness and Focus distinctions, as prosody is very important in distinguishing them, especially in West Germanic languages (Büring, 2006; Ladd, 2008; Rooth, 1992; Selkirk, 1995). In particular, the two research questions guiding this study were
+
+--
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+"(i) How well listeners can identify the focus condition of an utterance based on its prosodic form (form-to-function mapping)"
+
+
+--
+
+"(ii) How well they can identify an appropriate prosodic form to match the focus condition specified by the discourse context (func- tion-to-form mapping)"
+
+---
+
+# 2. Methods
+
+## Participants
+
+- Recruited online
+
+- From the United States 
+
+- +18 years old
+
+- Only one participation
+
+???
+via the crowd-sourcing website Amazon Mechanical Turk (AMT).
+
+[findparticipants
+prolific.ac]
+
+via filtering of IP address by the AMT system
+
+xx
+
+from 3 experiments 
+
+---
+
+# 2. Methods
+
+## Materials &amp; Procedure
+
+&lt;br/&gt;
+
+|(1) Damon fried the omelet. &lt;br/&gt; |
+|:-------|:------|
+| a. Do you know what happened yesterday? | [Damon fried the omelet]&lt;sub&gt;F&lt;/sub&gt;. |
+| b. Do you know who fried the omelet? | [Damon]&lt;sub&gt;F&lt;/sub&gt; fried the omelet. |
+| c. Do you know what Damon fried? | Damon fried [the omelet]&lt;sub&gt;F&lt;/sub&gt;. |
+| d. Did Pam fry the omelet? | [Damon]&lt;sub&gt;F&lt;/sub&gt; fried the omelet. |
+| e. Did Damon fry the omelet? | Damon fried the omelet. |
+
+&lt;br/&gt;
+
+- Two-alternative forced-choice response (experiments 1 and 2)
+- 5-point scale response (experiment 3)
+
+???
+
+Between-subjects
+Reaction to short question-answer dialogues.
+
+The question provides the discourse context that establishes one of four information structure conditions of the answer: broad focus (a), narrow focus (b-c), and contrastive focus (d) on the sentential subject, and the sentence subject as discourse-given (e).
+
+For experiments 1 &amp; 2
+Two tasks (between-subjects, only one pair)
+  1. listeners had to select which of two prosodic patterns best signalled a specified focus category (1 context – 2 prosodic forms, henceforth 1C-2P)
+  2. listeners had to select which of two focus categories was signalled by the prosody of an utterance (2 contexts – 1 prosodic form, henceforth 2C-1P).
+
+
+---
+
+# 2. Methods
+
+## Statistical Analysis
+
+Bayesian statistics
+  - Hierarchy logistic regression models (Exp. 1 &amp; 2)
+  - Hierarchical ordinal logistic models (Exp. 3)
+      - Random intercept for participants
+
+---
+
+# 3. Material and resource availability
+
+https://osf.io/4qxmh/
+
+Data  
+Code
+      Abstract
+      Wiki for project content  
+
+&lt;img src="./libs/images/wiki.png" height="200px" width="450px" /&gt;
+      
+--
+NO reproducible document:
+  - No registration
+  - No README
+  
+???
+![](./libs/images/wiki.png)
+  
+
+
+---
+ 
+# 4. Supplementary materials
+
+https://osf.io/4qxmh/
+
+Stimuli   
+Figures (reproduced)
+
+
+
+--
+
+No README file, no codebook for supplementary materials either
+
+
+---
+
+# 5. Analysis:
+
+##  Software
+
+R &gt; brms (Bürkner, 2016)
+   
+???
+So open source
+
+--
+      
+##  Running the code
+
+No errors (if everything run)   
+
+
+No output   
+Poor informative comments in code (except at beginning)
+No print command to see actual results
+
+&gt;
+
+Results confusing: same names for code variables in both experiments
+Decimals sometimes truncated sometimes rounded up or down
+Exp 3 outputs many more numbers than reported: criteria for exclusion?
+
+
+      
+???
+If run from the created data files, then experiment 1 throws error for one command
+
+Two figures have their own code, four others embedded in analysis code, and not all numbers are rounded equal (some up after .5, some down even if higher than .5)
+
+If you run all the code, and print, it will retrieve results for exp 2 
+
+---
+##### See higher bound for estimate, numbers sometimes truncated, other rounded
+
+![](./libs/images/table_2.png)
+
+![](./libs/images/hb_2.png)
+
+---
+
+# 5. Analysis
+
+Results reproduced mostly   
+But, for experiment 1 (table 1), beta not always
+
+--
+
+##### See P beta &gt; 0 column, data not always reproduced
+
+![](./libs/images/table_1.png)
+
+![](./libs/images/beta_1.png)
+
+---
+# 6. Other materials
+
+Two RData files
+
+???
+generated by code anyway, but appreciated as it takes forever to produce them
+
+---
+
+# 7. Conclusion
+
+Score: 5/10
+
+--
+
+Reasons:  
+
+  - Stimuli provided
+  - Working code provided
+
+--
+
+&lt;br/&gt;
+  - No pre-registration
+  - No README
+  - No reproducible document
+  - Poor comments and name assignment in code resulting in confusing reproducible results
+  - Data sometimes manipulated?
+  - Directory had to be changed to reproduce figures 1 &amp; 2
+
+???
+
+To see changes in real time
+
+remotes::install_github('yihui/xaringan', upgrade = TRUE)
+xaringan::inf_mr()  # delay is one second
+
+
+---
+
+&lt;img src="./libs/images/model.png" height="480px" width="800px"/&gt;
+
+
+---
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+# Thank you
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
